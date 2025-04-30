@@ -124,10 +124,10 @@ $(function () {
 
     // 반응형 리사이징 대응 
     $(window).resize(function () {
-        location.reload(); // 뷰포트 바뀌면 새로고침
+        location.reload(); 
     });
 
-    
+    //top 이동 버튼
     $(window).scroll(function(){
         t=$(window).scrollTop();
         if(t>600)
@@ -141,6 +141,7 @@ $(function () {
         e.preventDefault();
         $('body,html').animate({scrollTop:0})
     })
+    
     //모바일 메뉴
     $('.mbmenu').click(function(){
         $(this).toggleClass('active');
