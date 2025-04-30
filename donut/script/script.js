@@ -1,11 +1,11 @@
 window.onload = function () {
+  //이벤트 슬라이드
   const eventWrap = document.querySelector(".event_wrap");
   const slider = eventWrap.querySelector(".slider");
   const slideLis = slider.querySelectorAll("li");
   const prevBtn = eventWrap.querySelector(".prev");
   const nextBtn = eventWrap.querySelector(".next");
 
-  // 슬라이드 초기 설정
   const liWidth = slideLis[0].clientWidth;
   const sliderWidth = liWidth * slideLis.length;
   slider.style.width = `${sliderWidth}px`;
@@ -13,7 +13,7 @@ window.onload = function () {
   let currentIdx = 0;
   let translate = 0;
 
-  // 클릭 이벤트 연결
+  // 클릭 이벤트
   nextBtn.addEventListener("click", function (e) {
     e.preventDefault();
     if (currentIdx < slideLis.length - 1) {
@@ -32,23 +32,16 @@ window.onload = function () {
     }
   });
 
-  //donut slide
+  //메뉴 자동 슬라이드 new
   const imgSlide = document.querySelector(".slide");
-
-  // 복제
   const clone = imgSlide.cloneNode(true);
-
-  // 복제본 추가
+  
   document.querySelector(".menu_slidewrap").appendChild(clone);
-
-  // 원본, 복제본 위치 지정
   document.querySelector(".slide").offsetWidth + "px";
-
-  // 클래스 할당
   imgSlide.classList.add("original");
   clone.classList.add("clone");
 
-  //donut slide2
+  //메뉴 자동 슬라이드 best
   const imgSlide2 = document.querySelector(".slide2"); // 원본
   const clone2 = imgSlide2.cloneNode(true); // 복제
   const wrapper = document.querySelector(".menu_slidewrap2");
