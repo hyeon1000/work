@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/* Reset CSS */
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: none; /*android에서 firefox 브라우저*/
+	-moz-text-size-adjust: none; 
+	/*모바일에서 텍스트 사이즈가 줄어드는 걸 방지*/
+	text-size-adjust: none; /*text-size-adjust와 100% 동일*/
+	box-sizing: border-box;
+}
+.hidden{display: none;}
+
+body {
+	font-size: 16px;
+	color: #333;
+	background-color: #141414;
+}
+img, fieldset, input {
+	vertical-align: top;
+	border: 0;
+	max-width: 100%; 
+}
+ul, ol, li, dl {
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+hr {
+	border: none;
+}
+a {
+	color: inherit;
+}
+a, a:link {
+ text-decoration: none;
+}
+
+em, i, address {
+	font-style: normal;
+	font-weight: normal;
+}
+legend, caption {
+	display: none;
+	clear: both;
+}
+input, textarea, select, button, table {
+	line-height: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+section, nav, article, aside, hgroup, header, footer {
+	display: block;
+}
+textarea, input {
+	background: url(none);
+	-webkit-apprearance: normal;
+}
+textarea {
+	resize: none;
+}
+label {
+	cursor: pointer;
+}
