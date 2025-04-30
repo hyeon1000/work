@@ -4,10 +4,9 @@
 * {
 	margin: 0;
 	padding: 0;
-	-webkit-text-size-adjust: none; /*android에서 firefox 브라우저*/
+	-webkit-text-size-adjust: none;
 	-moz-text-size-adjust: none; 
-	/*모바일에서 텍스트 사이즈가 줄어드는 걸 방지*/
-	text-size-adjust: none; /*text-size-adjust와 100% 동일*/
+	text-size-adjust: none; 
 	box-sizing: border-box;
 }
 .hidden{display: none;}
