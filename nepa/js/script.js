@@ -1,5 +1,15 @@
 window.onload = function () {
+  
+//nav 호버 시
+$('nav').mouseenter(function(){
+    $('.sub, .bg').stop().slideDown()
+  })
+  $('.bg').mouseleave(function(){
+    $('.sub, .bg').stop().slideUp()
+  })
 
+  
+//메인 비주얼 슬라이드
   var visualSwiper = new Swiper(".visual_container", {
     pagination: {
       el: ".swiper-pagination",
@@ -14,7 +24,7 @@ window.onload = function () {
       prevEl: ".swiper-button-prev",
     },
   });
-
+//new 콘텐츠 슬라이드
   var mySwiper = new Swiper(".mySwiper", {
     slidesPerView: 'auto',
     spaceBetween: 10,
@@ -23,7 +33,7 @@ window.onload = function () {
       prevEl: ".swiper-button-prev",
     },
   });
-
+//best 콘텐츠 슬라이드
   var responsiveSwiper = new Swiper(".swiper_container", {
     slidesPerView: '1.1',
     spaceBetween: 10,
@@ -93,7 +103,7 @@ window.onload = function () {
     }
   });
   
-
+//모바일 메뉴 클릭 시
   $('.subnav_menu > li').click(function(e){
     e.preventDefault(); 
 
@@ -107,13 +117,5 @@ window.onload = function () {
       icon.removeClass('fa-minus').addClass('fa-plus');
     }
   });
-  
 
-
-  $('nav').mouseenter(function(){
-    $('.sub, .bg').stop().slideDown()
-  })
-  $('.bg').mouseleave(function(){
-    $('.sub, .bg').stop().slideUp()
-  })
 };
