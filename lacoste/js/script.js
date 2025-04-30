@@ -1,4 +1,5 @@
 $(function () {
+  //모바일 화면 시, 메인 사진 변경
   function updateImage() {
     if ($(window).width() < 768) {
       $(".slide > img").attr("src", "./images/mb_main.jpg");
@@ -15,7 +16,7 @@ $(function () {
   // 처음 로딩 시 실행
   updateImage();
 
-  // resize 이벤트에 debounce 적용
+  // resize 이벤트에 디바운스 적용
   let resizeTimer;
   $(window).resize(function () {
     clearTimeout(resizeTimer);
@@ -26,7 +27,7 @@ $(function () {
   $(".menu_toggle").click(function (e) {
     e.preventDefault();
     $(this).toggleClass("on"); // 아이콘 전환
-    $(".mb_menu").toggleClass("active"); // 메뉴 열기/닫기
+    $(".mb_menu").toggleClass("active"); 
     $("body").toggleClass("no-scroll");
   });
 
@@ -37,7 +38,7 @@ $(function () {
     }
   });
 
-  //HEADER-TOP
+  //HEADER-TOP fadein/out효과
   let n = 0;
   $(".header_top > span").eq(n).addClass("on");
   setInterval(function () {
@@ -59,7 +60,7 @@ $(function () {
       $(".header_bottom").addClass("on");
     }
     if (h < lastScroll) {
-      // 사용자가 스크롤을 위로 올릴 때
+      // 스크롤을 위로 올릴 때
       $(".header_bottom").removeClass("on");
     }
     lastScroll = h; // 현재 위치 저장
